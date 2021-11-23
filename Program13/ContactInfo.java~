@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+
+public class ContactInfo {
+   
+   private String name;     // name of individual
+   private ArrayList<Phone> phoneNums; // list of phone numbers for this individual 
+   
+    // ======= Constructors ======= 
+   /**
+    * This constructor sets the name and phone number fields
+    * from the values passed as arguments.
+    * @param phonNums ArrayList
+    * @param name String 
+    */
+   public ContactInfo(){
+        name = "unknown";
+        phoneNums = new ArrayList<Phone>();
+   }
+   
+   public ContactInfo(String name, ArrayList<Phone> phoneNumber) {
+      this.name = name;
+      this.phoneNums = phoneNumber;
+   }
+   
+   public String getName() {
+      return this.name;
+   }
+   
+   public ArrayList<Phone> getPhones() {
+      return this.phoneNums;
+   }
+   
+   public boolean addPhone(Phone p) {
+      boolean check = true;
+      String lab = p.getLabel();
+      String pN = p.getPhonNum();
+}
+   
+   public boolean removePhone(Phone p) {
+      boolean check = true;
+     // if (check == false) break;
+      if (phoneNums.isEmpty) { check = false;}
+      if (!(phoneNums.contains(p.getLabel())) || !(phoneNums.contains(p.getPhonNum()))) {
+         check = false;
+   }
+     // else if (phoneNums(getPhonNum) == "") return flase;
+      else {
+         phoneNums.remove(p);
+      }
+   return check;
+}
+}
